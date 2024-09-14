@@ -483,7 +483,7 @@ class Tree extends React.Component<TreeProps, TreeState> {
 
     if (depthFactor) {
       nodes.forEach(node => {
-        node.y = node.depth * depthFactor;
+        node.y = node.depth * depthFactor * (node.isParent || 1);
       });
     }
 
